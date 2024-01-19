@@ -13,7 +13,7 @@ function DashHome({ selectedTitle, welcomeUsername }) {
   const fetchUserDashboard = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/users?home=${selectedTitle}&token=${token}`
+        `https://unity-backend-475p.onrender.com/users?home=${selectedTitle}&token=${token}`
       );
       setUserData(res.data);
     } catch (err) {

@@ -42,7 +42,7 @@ function Customers({ selectedTitle }) {
   const fetchCustomers = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/users?customers=${selectedTitle}&token=${token}`
+        `https://unity-backend-475p.onrender.com/users?customers=${selectedTitle}&token=${token}`
       );
       setCustomerData(res.data);
     } catch (err) {

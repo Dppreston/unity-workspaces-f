@@ -55,7 +55,7 @@ function login() {
   const handleLogin = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/users/?loginUsername=${userName}&loginPassword=${password}`
+        `https://unity-backend-475p.onrender.com/users/?loginUsername=${userName}&loginPassword=${password}`
       );
       let token = res.data[0]._id;
       setRes(<p className="error login-res-position"> {res.data}</p>);
@@ -86,7 +86,10 @@ function login() {
     };
 
     try {
-      const res = await axios.post("http://localhost:9000/users", postUser);
+      const res = await axios.post(
+        "https://unity-backend-475p.onrender.com/users",
+        postUser
+      );
       setSignupSuccess(<p className="success">{res.data}</p>);
       setTimeout(() => {
         location.reload();

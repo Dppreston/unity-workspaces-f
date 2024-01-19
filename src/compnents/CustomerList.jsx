@@ -29,7 +29,7 @@ function CustomerList({ customerData, fetchCustomers }) {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?customerDelete=true`,
+        `https://unity-backend-475p.onrender.com/users?customerDelete=true`,
         customerDeleteData
       );
       fetchCustomers();

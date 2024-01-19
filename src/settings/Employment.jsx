@@ -28,7 +28,7 @@ function Employment({ currentAccount, fetchUserSettings }) {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?employerSave=true&employerId=${token}`,
+        `https://unity-backend-475p.onrender.com/users?employerSave=true&employerId=${token}`,
         employmentSettingData
       );
       setSuccess(<p className="success setting-updated">{res.data}</p>);

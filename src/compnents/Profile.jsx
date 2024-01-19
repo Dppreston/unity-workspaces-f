@@ -8,7 +8,7 @@ function Profile({ selectedTitle }) {
   const fetchUserProfile = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/users?settings=${selectedTitle}&token=${token}`
+        `https://unity-backend-475p.onrender.com/users?settings=${selectedTitle}&token=${token}`
       );
       setUser(res.data);
     } catch (err) {

@@ -39,7 +39,7 @@ function DashAppoint({ selectedTitle }) {
   const fetchAppointments = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/users?appointments=${selectedTitle}&token=${token}&date=${appointmentDate} `
+        `https://unity-backend-475p.onrender.com/users?appointments=${selectedTitle}&token=${token}&date=${appointmentDate} `
       );
       setUserData(res.data);
     } catch (err) {
@@ -72,7 +72,7 @@ function DashAppoint({ selectedTitle }) {
     };
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?appointment=${selectedTitle}`,
+        `https://unity-backend-475p.onrender.com/users?appointment=${selectedTitle}`,
         appointmentData
       );
       setAppointRes(<p className="success">{res.data}</p>);
@@ -111,7 +111,7 @@ function DashAppoint({ selectedTitle }) {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?appointDeleteConfirm=true`,
+        `https://unity-backend-475p.onrender.com/users?appointDeleteConfirm=true`,
         deleteData
       );
       setAppointRes(<p className="success">{res.data}</p>);

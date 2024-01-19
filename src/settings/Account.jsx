@@ -28,7 +28,7 @@ function Account({ currentAccount, fetchUserSettings }) {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?accountSave=true&accountId=${token}`,
+        `https://unity-backend-475p.onrender.com/users?accountSave=true&accountId=${token}`,
         accountUpdateData
       );
       setSuccess(<p className="success setting-updated">{res.data}</p>);

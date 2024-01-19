@@ -28,7 +28,7 @@ function Personal({ currentAccount, fetchUserSettings }) {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?personalSave=true&personalId=${token}`,
+        `https://unity-backend-475p.onrender.com/users?personalSave=true&personalId=${token}`,
         personalUpdate
       );
       setSuccess(<p className="success setting-updated">{res.data}</p>);

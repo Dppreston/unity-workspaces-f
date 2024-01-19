@@ -41,23 +41,6 @@ const navMenuContent = [
   },
 ];
 
-//   {
-//     id: 1,
-//     title: "profile",
-//     icon: `fa-solid fa-user`,
-//   },
-//   {
-//     id: 2,
-//     title: "settings",
-//     icon: `fa-solid fa-gear`,
-//   },
-//   {
-//     id: 3,
-//     title: "logout",
-//     icon: "fa-solid fa-arrow-right-from-bracket",
-//   },
-// ];
-
 function DashNav({ childTitle }) {
   const mobileMenuRef = useRef(null);
 

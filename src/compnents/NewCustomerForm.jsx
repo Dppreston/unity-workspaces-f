@@ -276,7 +276,7 @@ function NewCustomerForm({ success, submitted, fetchCustomers }) {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?newCustomer=newCustomer`,
+        `https://unity-backend-475p.onrender.com/users?newCustomer=newCustomer`,
         customerData
       );
       fetchCustomers();

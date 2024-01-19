@@ -21,7 +21,7 @@ function Profile({ currentAccount, fetchUserSettings }) {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/users?profileSave=true&profileId=${token}`,
+        `https://unity-backend-475p.onrender.com/users?profileSave=true&profileId=${token}`,
         updateBioData
       );
       setSuccess(<p className="success setting-updated">{res.data}</p>);

@@ -96,7 +96,7 @@ function DashNotes({ selectedTitle }) {
 
     try {
       const res = await axios.put(
-        "http://localhost:9000/users",
+        "https://unity-backend-475p.onrender.com/users",
         deleteNoteData
       );
       setUpdatedNote(<span className="success">{res.data}</span>);
@@ -113,7 +113,10 @@ function DashNotes({ selectedTitle }) {
     };
 
     try {
-      const res = await axios.put("http://localhost:9000/users", noteData);
+      const res = await axios.put(
+        "https://unity-backend-475p.onrender.com/users",
+        noteData
+      );
       setUpdatedNote(<span className="success">{res.data}</span>);
     } catch (err) {
       setError(err);
@@ -123,7 +126,7 @@ function DashNotes({ selectedTitle }) {
   const fetchNotes = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/users?notes=${selectedTitle}&token=${token}`
+        `https://unity-backend-475p.onrender.com/users?notes=${selectedTitle}&token=${token}`
       );
       setCurrentNotes(res.data);
     } catch (err) {
