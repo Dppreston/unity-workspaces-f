@@ -17,7 +17,7 @@
     "react-router": "^6.20.0",
     "react-router-dom": "^6.20.0"
   },
-  "proxy": "http://localhost:/9000",
+  "proxy": "https://unity-backend-475p.onrender.com",
   "devDependencies": {
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
